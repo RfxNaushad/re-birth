@@ -47,18 +47,20 @@ const ExpertiseSection = () => {
 
       <div className="flex flex-col  w-full max-w-[1440px] p-[2.5rem] space-y-12">
         {expertiseItems.map((item) => (
-          <div key={item.id} className="flex flex-col justify-between lg:flex-row space-y-4 lg:space-y-0 lg:items-start">
+          <div key={item.id} className="flex flex-coljustify-between lg:flex-row space-y-4 lg:space-y-0 lg:items-start">
             {/* Expertise Item Content */}
-            <div className="flex flex-col w-[80%] space-y-2">
+            <div className="flex w-[80%]">
+              <div className='flex  flex-col gap-4 w-[70%]'>
               <p className="text-gray-400 text-[1rem] uppercase">{item.id} —</p>
               <h3 className="text-[2rem] font-semibold">{item.title}</h3>
               <p className="text-[1rem] text-gray-600">{item.description}</p>
+              </div>
             </div>
 
             {/* Right Side Services List */}
             <div className="flex flex-col w-[20%] space-y-2 text-gray-600 text-sm uppercase lg:w-1/3">
               {item.services.map((service, index) => (
-                <p key={index} className="pb-2 text-[1rem] border-b border-gray-300">
+                <p key={index} className="pb-2 text-[1rem] font-semibold border-b border-gray-300">
                   {service}
                 </p>
               ))}

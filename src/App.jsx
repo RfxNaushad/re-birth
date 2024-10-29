@@ -1,3 +1,4 @@
+import FeaturedProject from "./components/FeaturedProject";
 import HeroSection from "./components/HeroSection";
 import ProfileSection from "./components/ProfileSection";
 import TextSection from "./components/TextSection";
@@ -10,6 +11,7 @@ function App() {
             <HeroSection />
             <TextSection />
             <ProfileSection />
+            <FeaturedProject />
 
         </div>
     );

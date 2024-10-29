@@ -1,6 +1,6 @@
 import React from 'react';
 import MetricItem from './MetricItem';
-import { FaCrown, FaProjectDiagram, FaSmile, FaAlien } from 'react-icons/fa';
+import { FaCrown, FaProjectDiagram, FaSmile } from 'react-icons/fa';
 
 const metricsData = [
   {
@@ -32,7 +32,7 @@ const metricsData = [
     details: [],
   },
   {
-    icon: <FaAlien />,
+    icon: <FaSmile />,
     title: 'Worked with Mental Clients',
     metric: '1',
     details: [],
@@ -47,7 +47,7 @@ const MetricsSection = () => {
       </h2>
 
       {/* Metric Items */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl w-full">
+      <div className="flex flex-col gap-12 max-w-5xl w-full">
         {metricsData.map((metric, index) => (
           <MetricItem
             key={index}

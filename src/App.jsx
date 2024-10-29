@@ -1,6 +1,7 @@
 import ExpertiseSection from "./components/ExpertiseSection";
 import FeaturedProject from "./components/FeaturedProject";
 import HeroSection from "./components/HeroSection";
+import MetricsSection from "./components/MetricsSection";
 import ProfileSection from "./components/ProfileSection";
 import ProjectsList from "./components/ProjectList";
 import TextSection from "./components/TextSection";
@@ -16,7 +17,7 @@ function App() {
             <FeaturedProject />
             <ProjectsList />
             <ExpertiseSection />
-
+            <MetricsSection />
         </div>
     );
 }

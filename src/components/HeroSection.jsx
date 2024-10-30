@@ -94,7 +94,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import image1 from '../assets/images/Image2.webp';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper';
+// import { Autoplay } from 'swiper';
 import 'swiper/css'; // Import Swiper styles
 import image2 from '../assets/images/Image1.webp';
 import image3 from '../assets/images/Image3.jpg'; 
@@ -136,7 +136,7 @@ const HeroSection = () => {
 
       <Swiper
         className="absolute inset-0 -z-10"
-        modules={[Autoplay]} 
+        // modules={[Autoplay]} 
         loop={true}
         autoplay={{ delay: 1500, disableOnInteraction: false }} 
         effect="fade" 

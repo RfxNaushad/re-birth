@@ -25,18 +25,14 @@ const metricsData = [
       { count: '6', label: 'Charity, Pro Bono' },
     ],
   },
-  {
-    icon: <FaSmile />,
-    title: 'Client Satisfaction Rate',
-    metric: '99%',
-    details: [],
-  },
-  {
-    icon: <FaSmile />,
-    title: 'Worked with Mental Clients',
-    metric: '1',
-    details: [],
-  },
+  // {
+  //   icon: <FaSmile />,
+  //   title: 'Client Satisfaction Rate',
+  //   metric: '99%',
+  //   details: [
+  //     { count: <FaProjectDiagram  className='text-[3.12rem]'/>, label: 'Worked with Mental Clients' },
+  //   ],
+  // }
 ];
 
 const MetricsSection = () => {
@@ -47,7 +43,7 @@ const MetricsSection = () => {
       </h2>
 
       {/* Metric Items */}
-      <div className="flex flex-col gap-12 max-w-5xl w-full">
+      <div className="flex flex-col gap-12 justify-center items-center w-full">
         {metricsData.map((metric, index) => (
           <MetricItem
             key={index}

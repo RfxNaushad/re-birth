@@ -94,15 +94,16 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import image1 from '../assets/images/Image2.webp';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper';
 import 'swiper/css'; // Import Swiper styles
 import image2 from '../assets/images/Image1.webp';
-import image3 from '../assets/images/Image3.jpg'; // Add more images as needed
+import image3 from '../assets/images/Image3.jpg'; 
 
 gsap.registerPlugin(ScrollTrigger);
 
 const HeroSection = () => {
-  const markRef = useRef(null); // Create a ref for the MARK text
-  const containerRef = useRef(null); // Create a ref for the main container
+  const markRef = useRef(null); 
+  const containerRef = useRef(null); 
 
   useEffect(() => {
     const markElement = markRef.current;
@@ -111,15 +112,15 @@ const HeroSection = () => {
     // Create the ScrollTrigger for the MARK text
     const pinTrigger = ScrollTrigger.create({
       trigger: containerElement,
-      start: "top top", // Start when the container top hits the top of the viewport
-      end: () => `+=${containerElement.offsetHeight - markElement.offsetHeight - 50}`,
-      pin: markElement, // Pin the MARK element
-      scrub: true, // Smoothly animate the pinning
-      markers: true, // Enable markers for debugging (remove this in production)
+      start: "top top", 
+      end: () => `+=${containerElement.offsetHeight - markElement.offsetHeight - 60}`,
+      pin: markElement, 
+      scrub: true, 
+      markers: true, 
     });
 
     return () => {
-      pinTrigger.kill(); // Cleanup the ScrollTrigger on unmount
+      pinTrigger.kill(); 
     };
   }, []);
 
@@ -134,10 +135,11 @@ const HeroSection = () => {
       ></div> */}
 
       <Swiper
-        className="absolute inset-0 z-10"
+        className="absolute inset-0 -z-10"
+        modules={[Autoplay]} 
         loop={true}
-        autoplay={{ delay: 300 }} // Adjust the autoplay delay as needed
-        effect="fade" // Optional: Use fade effect for transitions
+        autoplay={{ delay: 1500, disableOnInteraction: false }} 
+        effect="fade" 
         
       >
         <SwiperSlide>

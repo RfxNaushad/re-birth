@@ -92,7 +92,11 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import image from '../assets/images/Image2.webp';
+import image1 from '../assets/images/Image2.webp';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css'; // Import Swiper styles
+import image2 from '../assets/images/Image1.webp';
+import image3 from '../assets/images/Image3.jpg'; // Add more images as needed
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -121,13 +125,41 @@ const HeroSection = () => {
 
   return (
     <div ref={containerRef} className="relative h-screen w-full text-white">
-      {/* Background image */}
+      {/* Background image
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${image})`,
         }}
-      ></div>
+      ></div> */}
+
+      <Swiper
+        className="absolute inset-0 z-10"
+        loop={true}
+        autoplay={{ delay: 300 }} // Adjust the autoplay delay as needed
+        effect="fade" // Optional: Use fade effect for transitions
+        
+      >
+        <SwiperSlide>
+          <div
+            className="bg-cover bg-center h-full"
+            style={{ backgroundImage: `url(${image2})` }}
+          ></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div
+            className="bg-cover bg-center h-full"
+            style={{ backgroundImage: `url(${image1})` }}
+          ></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div
+            className="bg-cover bg-center h-full"
+            style={{ backgroundImage: `url(${image3})` }}
+          ></div>
+        </SwiperSlide>
+        {/* Add more slides as needed */}
+      </Swiper>
 
       {/* Header */}
       <header className="absolute top-4 w-full flex justify-between px-10 text-md uppercase">

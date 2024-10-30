@@ -37,8 +37,8 @@ const metricsData = [
 
 const MetricsSection = () => {
   return (
-    <section className="flex flex-col items-center w-full py-16 px-8 bg-white space-y-12">
-      <h2 className="text-center text-sm font-semibold uppercase tracking-widest text-gray-500 mb-8">
+    <section className="flex flex-col items-center w-full pt-16 pb-24 px-8 bg-white space-y-12">
+      <h2 className="text-center text-[1.75rem] font-semibold uppercase tracking-widest text-gray-500 mb-8">
         Metric Marvels
       </h2>
 

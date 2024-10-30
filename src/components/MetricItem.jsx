@@ -3,7 +3,7 @@ import React from 'react';
 // eslint-disable-next-line react/prop-types
 const MetricItem = ({ icon, title, metric, details }) => {
     return (
-        <div className="flex justify-between items-start  w-[1024px] m-auto ">
+        <div className="flex justify-between items-start gap-48 m-auto ">
             {/* Left Side: Icon, Title, and Metric Number */}
             <div className="flex w-[50%] flex-col items-start space-y-2">
                 <div className='flex gap-4 justify-start items-center'>

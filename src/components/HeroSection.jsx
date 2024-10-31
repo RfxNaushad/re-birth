@@ -38,7 +38,7 @@ const HeroSection = () => {
       end: () => `+=${containerElement.offsetHeight - markElement.offsetHeight - 105}`,
       pin: markElement, 
       scrub: true, 
-      markers: true, 
+      // markers: true, 
     });
 
     return () => {

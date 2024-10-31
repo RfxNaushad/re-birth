@@ -22,12 +22,12 @@ function App() {
                 end: 'bottom 30%',
                 scrub: true,
             }
-        }).fromTo('.main', { y: '0%' }, { y: '-11%', })
+        }).fromTo('.main', { y: '0%' }, { y: '-12.3%', })
     }, [])
     return (
         <div>
+            <HeroSection />
             <div className="main z-20 bg-white">
-                <HeroSection />
                 <TextSection />
                 {/* <ProfileSection /> */}
                 <FeaturedProject />

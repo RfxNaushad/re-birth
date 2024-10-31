@@ -38,7 +38,7 @@ const HeroSection = () => {
       end: () => `+=${containerElement.offsetHeight - markElement.offsetHeight - 105}`,
       pin: markElement, 
       scrub: true, 
-      // markers: true, 
+      markers: true,
     });
 
     return () => {
@@ -109,32 +109,6 @@ const HeroSection = () => {
 
   return (
     <div ref={containerRef} className="relative h-screen w-full text-white">
-      {/* <Swiper
-        className="absolute inset-0 -z-10"
-        loop={true}
-        autoplay={{ delay: 1500, disableOnInteraction: false }} 
-        effect="fade" 
-      >
-        <SwiperSlide>
-          <div
-            className="bg-cover bg-center h-full"
-            style={{ backgroundImage: `url(${image2})` }}
-          ></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div
-            className="bg-cover bg-center h-full"
-            style={{ backgroundImage: `url(${image1})` }}
-          ></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div
-            className="bg-cover bg-center h-full"
-            style={{ backgroundImage: `url(${image3})` }}
-          ></div>
-        </SwiperSlide>
-      </Swiper> */}
-
       <div className="absolute inset-0 flex transition-transform duration-1000" style={{
         transform: `translateX(-${currentIndex * 100}%)`
       }}>

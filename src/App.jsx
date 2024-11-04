@@ -22,7 +22,7 @@ function App() {
                 end: 'bottom 30%',
                 scrub: true,
             }
-        }).fromTo('.main', { y: '0%' }, { y: '-12.3%', })
+        }).fromTo('.main', { y: '0%' }, { y: '-15%', })
     }, [])
     return (
         <div>

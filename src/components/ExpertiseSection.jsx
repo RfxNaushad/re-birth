@@ -1,4 +1,5 @@
-import React from 'react';
+import gsap from 'gsap';
+import React, { useEffect } from 'react';
 
 // Data for expertise items
 const expertiseItems = [
@@ -35,19 +36,30 @@ const expertiseItems = [
 ];
 
 const ExpertiseSection = () => {
+  useEffect(() => {
+    const EXTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#expertiseContainer',
+        start: 'top bottom',
+        end: 'top center',
+        scrub: true,
+      }
+    })
+    EXTL.fromTo('#expertiseDes', {y: 10, opacity: 0}, {y: 0, opacity: 1,})
+  }, [])
   return (
-    <section className="flex flex-col items-center justify-center w-full py-16 px-8 bg-white">
+    <section id='expertiseContainer' className="flex flex-col items-center justify-center w-full py-16 px-8 bg-white">
       {/* Section Header */}
       <h2 className="text-center text-[1.75rem] font-semibold uppercase tracking-widest text-gray-500 mb-4">
         Creative Expertise
       </h2>
-      <p className="text-center text-[3.5rem] font-semibold max-w-6xl mb-16 px-4">
+      <p id='expertiseDes' className="text-center text-[3.5rem] font-semibold max-w-6xl mb-16 px-4">
         "Design is not just what it looks like and feels like. Design is how it works."
       </p>
 
       <div className="flex flex-col  w-full max-w-[1440px] p-[2.5rem] space-y-12">
         {expertiseItems.map((item) => (
-          <div key={item.id} className="flex flex-coljustify-between lg:flex-row space-y-4 lg:space-y-0 lg:items-start">
+          <div key={item.id} className="card flex flex-coljustify-between lg:flex-row space-y-4 lg:space-y-0 lg:items-start">
             {/* Expertise Item Content */}
             <div className="flex w-[80%]">
               <div className='flex  flex-col gap-4 w-[70%]'>

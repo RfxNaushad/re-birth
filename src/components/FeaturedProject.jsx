@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -72,7 +72,7 @@ const FeaturedProject = () => {
       <section ref={textRef} className="flex flex-col gap-24 items-center justify-center h-[600px] w-full bg-white py-16">
         <div className="text-center w-[1120px] mb-16 px-16">
           <p className="text-[3.12rem] font-bold">
-            I've had the privilege of collaborating with renowned brands, 
+            I&apos;ve had the privilege of collaborating with renowned brands, 
             bringing innovative ideas to life and creating impactful designs.
           </p>
         </div>

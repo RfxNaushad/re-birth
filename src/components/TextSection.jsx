@@ -22,7 +22,7 @@ function TextSection() {
           start: `top+=${index * 100} center`,
           end: `top+=${(index + 1) * 100} center`,
           scrub: true,
-          pin: textRef.current, // Pinning the entire text section
+          pin: textRef.current, 
           onEnter: () => gsap.to(sentence, { color: '#ffffff', opacity: 1 }),
           onLeave: () => gsap.to(sentence, { color: '#b3b3b3', opacity: 0.2 }),
           onEnterBack: () => gsap.to(sentence, { color: '#ffffff', opacity: 1 }),
@@ -39,10 +39,10 @@ function TextSection() {
         y: 0,
         scrollTrigger: {
           trigger: textRef.current,
-          start: `top+=${sentences.length * 100} center`,
-          end: '+=200',
+          start: `top+=${sentences.length * 100} 80%`,
+          end: '+=400',
           pin: true, 
-          scrub: 1,
+          scrub: true,
           toggleActions: 'play none none reverse',
         },
       }

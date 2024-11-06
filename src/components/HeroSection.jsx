@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import{ useEffect, useRef, useState } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import image1 from '../assets/images/Image2.webp';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // Import Swiper styles
 import image2 from '../assets/images/Image1.webp';
 import image3 from '../assets/images/Image3.jpg'; 

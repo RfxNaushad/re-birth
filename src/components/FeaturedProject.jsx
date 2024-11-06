@@ -47,14 +47,13 @@ const FeaturedProject = () => {
         start: 'top top',
         end: '+=500',
         pin: true,
-        // markers: true,
       }
     })
-    PTL.fromTo(textRef.current, {y: 200}, {y: 0})
+    PTL.fromTo(textRef.current, {y: 0}, {y: -800})
   }, []);
 
   return (
-    <>
+    <div className='relative'>
       <section ref={projectRef} className="flex feature-project-section flex-col items-center justify-center py-16 bg-white">
         <h2 className="text-center text-zinc-800 text-[1.7rem] font-semibold uppercase mb-16">Featured Project</h2>
         
@@ -69,7 +68,7 @@ const FeaturedProject = () => {
       </section>
 
       {/* Brand Logos and Text Section */}
-      <section ref={textRef} className="flex flex-col gap-24 items-center justify-center h-[600px] w-full bg-white py-16">
+      <section ref={textRef} className="flex absolute w-full flex-col gap-24 items-center justify-center h-[800px]  bg-white py-16">
         <div className="text-center w-[1120px] mb-16 px-16">
           <p className="text-[3.12rem] font-bold">
             I&apos;ve had the privilege of collaborating with renowned brands, 
@@ -87,7 +86,7 @@ const FeaturedProject = () => {
           </Slider>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

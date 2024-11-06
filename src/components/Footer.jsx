@@ -1,7 +1,7 @@
 
 const ContactSection = () => {
   return (
-    <div className="footer flex flex-col justify-center items-center  bg-white text-black fixed -z-20 top-0 w-full h-full">
+    <div className="footer flex flex-col justify-center items-center  bg-white text-black">
       {/* MARK ASHTON Text */}
       <div className="text-[13.2vw] font-bold">
         MARK ASHTON

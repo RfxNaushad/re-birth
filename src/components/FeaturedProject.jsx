@@ -47,7 +47,7 @@ const FeaturedProject = () => {
         start: 'top top',
         end: '+=500',
         pin: true,
-        markers: true,
+        // markers: true,
       }
     })
     PTL.fromTo(textRef.current, {y: 200}, {y: 0})
